@@ -61,3 +61,11 @@ public func - <T: TimePeriod> (date: NSDate, period: T) -> NSDate {
     var calendar = NSCalendar.currentCalendar()
     return calendar.dateByAddingComponents(period.negativeComponent, toDate: date, options: nil)!
 }
+
+public func + (date: NSDate, ti: NSTimeInterval) -> NSDate {
+    return date.dateByAddingTimeInterval(ti)
+}
+
+public func - (date: NSDate, ti: NSTimeInterval) -> NSDate {
+    return date.dateByAddingTimeInterval(-ti)
+}

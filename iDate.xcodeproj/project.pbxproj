@@ -8,8 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		B824293E1ABE858700CB3011 /* NSDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B824293D1ABE858700CB3011 /* NSDate.swift */; };
-		B82429421ABE85E600CB3011 /* Minute.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82429401ABE85E600CB3011 /* Minute.swift */; };
+		B82429421ABE85E600CB3011 /* PeriodComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82429401ABE85E600CB3011 /* PeriodComponents.swift */; };
 		B82429431ABE85E600CB3011 /* TimePeriod.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82429411ABE85E600CB3011 /* TimePeriod.swift */; };
+		B82429461ABE89B200CB3011 /* TestMinute.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82429451ABE89B200CB3011 /* TestMinute.swift */; };
+		B82429481ABE8A0100CB3011 /* TestSecond.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82429471ABE8A0100CB3011 /* TestSecond.swift */; };
+		B824294A1ABE8A7800CB3011 /* TestHour.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82429491ABE8A7800CB3011 /* TestHour.swift */; };
+		B824294C1ABE8B9B00CB3011 /* TestDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = B824294B1ABE8B9B00CB3011 /* TestDay.swift */; };
 		B89F25FD1AB895D000346B6C /* AddSubstractTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89F25FC1AB895D000346B6C /* AddSubstractTest.swift */; };
 		B8BE04421AB85A3B005DA391 /* iDate.h in Headers */ = {isa = PBXBuildFile; fileRef = B8BE04411AB85A3B005DA391 /* iDate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B8BE04481AB85A3B005DA391 /* iDate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8BE043C1AB85A3B005DA391 /* iDate.framework */; };
@@ -29,8 +33,12 @@
 
 /* Begin PBXFileReference section */
 		B824293D1ABE858700CB3011 /* NSDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDate.swift; sourceTree = "<group>"; };
-		B82429401ABE85E600CB3011 /* Minute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Minute.swift; sourceTree = "<group>"; };
+		B82429401ABE85E600CB3011 /* PeriodComponents.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeriodComponents.swift; sourceTree = "<group>"; };
 		B82429411ABE85E600CB3011 /* TimePeriod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimePeriod.swift; sourceTree = "<group>"; };
+		B82429451ABE89B200CB3011 /* TestMinute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestMinute.swift; sourceTree = "<group>"; };
+		B82429471ABE8A0100CB3011 /* TestSecond.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestSecond.swift; sourceTree = "<group>"; };
+		B82429491ABE8A7800CB3011 /* TestHour.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestHour.swift; sourceTree = "<group>"; };
+		B824294B1ABE8B9B00CB3011 /* TestDay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestDay.swift; sourceTree = "<group>"; };
 		B89F25FC1AB895D000346B6C /* AddSubstractTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddSubstractTest.swift; sourceTree = "<group>"; };
 		B8BE043C1AB85A3B005DA391 /* iDate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = iDate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8BE04401AB85A3B005DA391 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -71,10 +79,21 @@
 		B824293F1ABE85C600CB3011 /* TimePeriod */ = {
 			isa = PBXGroup;
 			children = (
-				B82429401ABE85E600CB3011 /* Minute.swift */,
+				B82429401ABE85E600CB3011 /* PeriodComponents.swift */,
 				B82429411ABE85E600CB3011 /* TimePeriod.swift */,
 			);
 			path = TimePeriod;
+			sourceTree = "<group>";
+		};
+		B82429441ABE89A500CB3011 /* TestTimePeriod */ = {
+			isa = PBXGroup;
+			children = (
+				B824294B1ABE8B9B00CB3011 /* TestDay.swift */,
+				B82429491ABE8A7800CB3011 /* TestHour.swift */,
+				B82429451ABE89B200CB3011 /* TestMinute.swift */,
+				B82429471ABE8A0100CB3011 /* TestSecond.swift */,
+			);
+			path = TestTimePeriod;
 			sourceTree = "<group>";
 		};
 		B8BE04321AB85A3B005DA391 = {
@@ -118,6 +137,7 @@
 		B8BE044B1AB85A3B005DA391 /* iDateTests */ = {
 			isa = PBXGroup;
 			children = (
+				B82429441ABE89A500CB3011 /* TestTimePeriod */,
 				B89F25FC1AB895D000346B6C /* AddSubstractTest.swift */,
 				B8BE044E1AB85A3B005DA391 /* iDateTests.swift */,
 				B8BE044C1AB85A3B005DA391 /* Supporting Files */,
@@ -242,7 +262,7 @@
 			files = (
 				B824293E1ABE858700CB3011 /* NSDate.swift in Sources */,
 				B82429431ABE85E600CB3011 /* TimePeriod.swift in Sources */,
-				B82429421ABE85E600CB3011 /* Minute.swift in Sources */,
+				B82429421ABE85E600CB3011 /* PeriodComponents.swift in Sources */,
 				B8BE045D1AB864E0005DA391 /* NSCalendar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -253,6 +273,10 @@
 			files = (
 				B8BE044F1AB85A3B005DA391 /* iDateTests.swift in Sources */,
 				B89F25FD1AB895D000346B6C /* AddSubstractTest.swift in Sources */,
+				B82429461ABE89B200CB3011 /* TestMinute.swift in Sources */,
+				B82429481ABE8A0100CB3011 /* TestSecond.swift in Sources */,
+				B824294C1ABE8B9B00CB3011 /* TestDay.swift in Sources */,
+				B824294A1ABE8A7800CB3011 /* TestHour.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
