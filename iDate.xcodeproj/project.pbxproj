@@ -7,15 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B824293E1ABE858700CB3011 /* NSDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B824293D1ABE858700CB3011 /* NSDate.swift */; };
+		B82429421ABE85E600CB3011 /* Minute.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82429401ABE85E600CB3011 /* Minute.swift */; };
+		B82429431ABE85E600CB3011 /* TimePeriod.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82429411ABE85E600CB3011 /* TimePeriod.swift */; };
 		B89F25FD1AB895D000346B6C /* AddSubstractTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89F25FC1AB895D000346B6C /* AddSubstractTest.swift */; };
 		B8BE04421AB85A3B005DA391 /* iDate.h in Headers */ = {isa = PBXBuildFile; fileRef = B8BE04411AB85A3B005DA391 /* iDate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B8BE04481AB85A3B005DA391 /* iDate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8BE043C1AB85A3B005DA391 /* iDate.framework */; };
 		B8BE044F1AB85A3B005DA391 /* iDateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8BE044E1AB85A3B005DA391 /* iDateTests.swift */; };
-		B8BE04591AB85A77005DA391 /* NSDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8BE04581AB85A77005DA391 /* NSDate.swift */; };
-		B8BE045B1AB8604F005DA391 /* DateComponensts.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8BE045A1AB8604F005DA391 /* DateComponensts.swift */; };
 		B8BE045D1AB864E0005DA391 /* NSCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8BE045C1AB864E0005DA391 /* NSCalendar.swift */; };
-		B8BE045F1AB88395005DA391 /* TimePeriod.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8BE045E1AB88395005DA391 /* TimePeriod.swift */; };
-		B8BE04611AB884B4005DA391 /* Minute.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8BE04601AB884B4005DA391 /* Minute.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +28,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B824293D1ABE858700CB3011 /* NSDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDate.swift; sourceTree = "<group>"; };
+		B82429401ABE85E600CB3011 /* Minute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Minute.swift; sourceTree = "<group>"; };
+		B82429411ABE85E600CB3011 /* TimePeriod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimePeriod.swift; sourceTree = "<group>"; };
 		B89F25FC1AB895D000346B6C /* AddSubstractTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddSubstractTest.swift; sourceTree = "<group>"; };
 		B8BE043C1AB85A3B005DA391 /* iDate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = iDate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8BE04401AB85A3B005DA391 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -36,11 +38,7 @@
 		B8BE04471AB85A3B005DA391 /* iDateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iDateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8BE044D1AB85A3B005DA391 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B8BE044E1AB85A3B005DA391 /* iDateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iDateTests.swift; sourceTree = "<group>"; };
-		B8BE04581AB85A77005DA391 /* NSDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDate.swift; sourceTree = "<group>"; };
-		B8BE045A1AB8604F005DA391 /* DateComponensts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateComponensts.swift; sourceTree = "<group>"; };
 		B8BE045C1AB864E0005DA391 /* NSCalendar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSCalendar.swift; sourceTree = "<group>"; };
-		B8BE045E1AB88395005DA391 /* TimePeriod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimePeriod.swift; sourceTree = "<group>"; };
-		B8BE04601AB884B4005DA391 /* Minute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Minute.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +60,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B824293C1ABE856C00CB3011 /* NSDate */ = {
+			isa = PBXGroup;
+			children = (
+				B824293D1ABE858700CB3011 /* NSDate.swift */,
+			);
+			path = NSDate;
+			sourceTree = "<group>";
+		};
+		B824293F1ABE85C600CB3011 /* TimePeriod */ = {
+			isa = PBXGroup;
+			children = (
+				B82429401ABE85E600CB3011 /* Minute.swift */,
+				B82429411ABE85E600CB3011 /* TimePeriod.swift */,
+			);
+			path = TimePeriod;
+			sourceTree = "<group>";
+		};
 		B8BE04321AB85A3B005DA391 = {
 			isa = PBXGroup;
 			children = (
@@ -83,12 +98,10 @@
 		B8BE043E1AB85A3B005DA391 /* iDate */ = {
 			isa = PBXGroup;
 			children = (
+				B824293F1ABE85C600CB3011 /* TimePeriod */,
+				B824293C1ABE856C00CB3011 /* NSDate */,
 				B8BE04411AB85A3B005DA391 /* iDate.h */,
-				B8BE045A1AB8604F005DA391 /* DateComponensts.swift */,
-				B8BE04601AB884B4005DA391 /* Minute.swift */,
 				B8BE045C1AB864E0005DA391 /* NSCalendar.swift */,
-				B8BE04581AB85A77005DA391 /* NSDate.swift */,
-				B8BE045E1AB88395005DA391 /* TimePeriod.swift */,
 				B8BE043F1AB85A3B005DA391 /* Supporting Files */,
 			);
 			path = iDate;
@@ -227,10 +240,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B8BE04591AB85A77005DA391 /* NSDate.swift in Sources */,
-				B8BE045F1AB88395005DA391 /* TimePeriod.swift in Sources */,
-				B8BE04611AB884B4005DA391 /* Minute.swift in Sources */,
-				B8BE045B1AB8604F005DA391 /* DateComponensts.swift in Sources */,
+				B824293E1ABE858700CB3011 /* NSDate.swift in Sources */,
+				B82429431ABE85E600CB3011 /* TimePeriod.swift in Sources */,
+				B82429421ABE85E600CB3011 /* Minute.swift in Sources */,
 				B8BE045D1AB864E0005DA391 /* NSCalendar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

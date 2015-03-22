@@ -24,7 +24,7 @@ class AddSubstractTest : XCTestCase {
     }
     
     func testAddMinute() {
-        var now = NSDate.now
+        var now = NSDate.now()
         
         var afterOneMinute = now + Minute(1)
         XCTAssertEqual(Minute.INTERVAL, afterOneMinute.timeIntervalSinceDate(now))
@@ -40,7 +40,7 @@ class AddSubstractTest : XCTestCase {
     }
     
     func testSubstractMinute() {
-        var now = NSDate.now
+        var now = NSDate.now()
         
         var beforeOneMinute = now - Minute(1)
         XCTAssertEqual(Minute.INTERVAL, now.timeIntervalSinceDate(beforeOneMinute))

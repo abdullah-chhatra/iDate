@@ -102,6 +102,8 @@ public class Day : TimePeriodBase {
 
 public class Week : TimePeriodBase {
     
+    private let DAYS_IN_WEEK : UInt = 7
+    
     public class override var INTERVAL: NSTimeInterval {
         return Day.INTERVAL * 7
     }
@@ -112,13 +114,37 @@ public class Week : TimePeriodBase {
     
     public override var component: NSDateComponents {
         var component = NSDateComponents()
-        component.day = Int(count * 7)
+        component.day = Int(count * DAYS_IN_WEEK)
         return component
     }
     
     public override var negativeComponent: NSDateComponents {
         var component = NSDateComponents()
-        component.minute = -Int(count * 7)
+        component.minute = -Int(count * DAYS_IN_WEEK)
         return component
     }
 }
+
+public class Month : TimePeriodBase {
+    
+    public class override var INTERVAL: NSTimeInterval {
+        return Day.INTERVAL * 30
+    }
+    
+    public override var interval: NSTimeInterval {
+        return Month.INTERVAL * Double(count)
+    }
+    
+    public override var component: NSDateComponents {
+        var component = NSDateComponents()
+        component.month = Int(count)
+        return component
+    }
+    
+    public override var negativeComponent: NSDateComponents {
+        var component = NSDateComponents()
+        component.month = -Int(count)
+        return component
+    }
+}
+
