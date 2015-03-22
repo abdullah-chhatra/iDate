@@ -128,7 +128,7 @@ public class Week : TimePeriodBase {
 public class Month : TimePeriodBase {
     
     public class override var INTERVAL: NSTimeInterval {
-        return Day.INTERVAL * 30
+        return 2629743.0 //Seconds as per www.epochconverter.com (30.40 Days per month)
     }
     
     public override var interval: NSTimeInterval {
@@ -148,3 +148,25 @@ public class Month : TimePeriodBase {
     }
 }
 
+public class Year : TimePeriodBase {
+    
+    public class override var INTERVAL: NSTimeInterval {
+        return 31556926.0 //Seconds as per www.epochconverter.com (365.24 Days per year)
+    }
+    
+    public override var interval: NSTimeInterval {
+        return Month.INTERVAL * Double(count)
+    }
+    
+    public override var component: NSDateComponents {
+        var component = NSDateComponents()
+        component.year = Int(count)
+        return component
+    }
+    
+    public override var negativeComponent: NSDateComponents {
+        var component = NSDateComponents()
+        component.year = -Int(count)
+        return component
+    }
+}

@@ -14,6 +14,7 @@ public extension NSDate {
         return NSDate()
     }
     
+    
     public func beginingOfDay() -> NSDate {
         return normalizeWithComponents(.YearCalendarUnit | .MonthCalendarUnit | .DayCalendarUnit)
     }
