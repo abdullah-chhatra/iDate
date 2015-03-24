@@ -14,9 +14,23 @@ public extension NSDate {
         return NSDate()
     }
     
-//    func dateAfterCalenderUnit(matchingUnit: NSCalendarUnit) -> NSDate? {
-//        var calender = NSCalendar.currentCalendar()
-//        
-//        calender.nextDateAfterDate(date, matchingUnit: matchingUnit, value: <#Int#>, options: <#NSCalendarOptions#>)
-//    }
+    public class func today() -> NSDate {
+        return now().startOfDay()
+    }
+    
+    public class func yesterday() -> NSDate {
+        return now().startOfDay() - Day()
+    }
+    
+    public class func tomorrow() -> NSDate {
+        return now().startOfDay() + Day()
+    }
+    
+    public class func dayBeforeYesterday() -> NSDate {
+        return now().startOfDay() - Day(2)
+    }
+    
+    public class func dayAfterTomorrow() -> NSDate {
+        return now().startOfDay() + Day(2)
+    }
 }

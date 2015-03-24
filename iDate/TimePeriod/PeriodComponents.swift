@@ -120,7 +120,7 @@ public class Week : TimePeriodBase {
     
     public override var negativeComponent: NSDateComponents {
         var component = NSDateComponents()
-        component.minute = -Int(count * DAYS_IN_WEEK)
+        component.day = -Int(count * DAYS_IN_WEEK)
         return component
     }
 }

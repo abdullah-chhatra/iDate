@@ -81,3 +81,7 @@ public func - (date1: NSDate, date2: NSDate) -> NSDateComponents {
                     .CalendarUnitDay | .CalendarUnitHour | .CalendarUnitMinute | .CalendarUnitSecond
     return calendar.components(unitFlags, fromDate: date1, toDate: date2, options: nil)
 }
+
+public func - (date1: NSDate, date2: NSDate) -> NSTimeInterval {
+    return date1.timeIntervalSinceDate(date2)
+}
