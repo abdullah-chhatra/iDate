@@ -79,6 +79,17 @@ let before2Years     = date - Year(2)
 
 let before2Weeks3daysAnd5Hours =  date - Week(2) - Day(3) - Hour(5)
 ```
+The calculations are based on current calendar of the system. 
+
+Note on adding or subtracting months and years: Adding one month will increment month part of date by one or if month is December it will increment year by one and set month as Jan. Similarly for years.
+
+```
+let d1 = \\Feb 19 2015, 13:30:30
+let d2 = \\Mar 21 2015, 13:30:30
+
+let res1 = d1 + Month() \\Mar 19 2015, 13:30:30 (adding 28 days)
+let res2 = d2 + Month() \\Apr 21 2015, 13:30:30 (adding 31 days)
+```
 
 #### Defining your own Time Period
 It is also possible to define your own custom time period for date arithmetic. For example a fortnight or lecture duration of 45 minutes etc. 
@@ -117,3 +128,37 @@ let lastLectureStarts = firstLectureStarts + Lecture(numLectureInFirstHalf)
 
 You could also create complex duration with multiple date components involved in it.
 
+### Date components
+Access components of date using calculated properties. These are based on current calendar of the system.
+
+```
+let date = \\Mar 21 2015, 13:30:49
+
+let second  = date.second   \\ 49
+let minute  = date.minute   \\ 30
+let hour    = date.hour     \\ 13
+let day     = date.day      \\ 21
+let weekDay = date.weekDay  \\ 7 Sat
+let month   = date.month    \\ 3
+let year    = date.year     \\ 2015
+let weekOfMonth = date.weekOfMonth \\ 3 - 3rd week
+```
+
+### Basic useful dates
+Following are utility methods for creating some basic dates:
+
+```
+//Suppose it is right now Mar 21 2015, 13:30:49
+let now         = NSDate.now()                  \\Mar 21 2015, 13:30:49
+let today       = NSDate.today()                \\Mar 21 2015, 00:00:00 - Start of today
+let yesterday   = NSDate.yesterday()            \\Mar 20 2015, 00:00:00 - Start of yesterday
+let tomorrow    = NSDate.tomorrow()             \\Mar 22 2015, 00:00:00 - Start of tomorrow
+let dby         = NSDate.dayBeforeYesterday()   \\Mar 19 2015, 00:00:00 
+let dat         = NSDate.dayAfterTomorrow()     \\Mar 23 2015, 00:00:00
+
+let thisMinute  = NSDate.thisMinute()           \\Mar 21 2015, 13:30:00 - Start of this minute
+let thisHour    = NSDate.thisHour()             \\Mar 21 2015, 13:00:00 - Start of this hour
+let thisWeek    = NSDate.thisWeek()             \\Mar 15 2015, 00:00:00 - Start of this week
+let thisMonth   = NSDate.thisMonth()            \\Mar 1 2015, 00:00:00  - Start of this month
+let thisYear    = NSDate.thisYear()             \\Jan 1 2015, 00:00:00  - Start of this year
+```
