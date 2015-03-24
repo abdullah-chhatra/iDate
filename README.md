@@ -77,8 +77,43 @@ let beforeADay       = date - Day()
 let after4Weeks      = date + Week(4)
 let before2Years     = date - Year(2)
 
-let before2WeeksAnd3days5Hours =  date - Week(2) - Day(3) - Hour(5)
+let before2Weeks3daysAnd5Hours =  date - Week(2) - Day(3) - Hour(5)
 ```
 
 #### Defining your own Time Period
 It is also possible to define your own custom time period for date arithmetic. For example a fortnight or lecture duration of 45 minutes etc. 
+```
+public class Lecture: TimePeriodBase {
+    
+    let lectureMinutes = 45.0
+    
+    public class override var INTERVAL: NSTimeInterval {
+        return Minute.INTERVAL * Lecture().lectureMinutes
+    }
+    
+    public override var interval: NSTimeInterval {
+        return Lecture.INTERVAL * Double(count)
+    }
+    
+    public override var component: NSDateComponents {
+        var component = NSDateComponents()
+        component.minute = Int(Double(count) * lectureMinutes)
+        return component
+    }
+    
+    public override var negativeComponent: NSDateComponents {
+        var component = NSDateComponents()
+        component.minute = -Int(Double(count) * lectureMinutes)
+        return component
+    }
+}
+
+let numLecturesInFirtHalf = 4
+let firstLectureStarts = \\Some time
+let secondLectureStarts = firstLectureStarts + Lecture()
+...
+let lastLectureStarts = firstLectureStarts + Lecture(numLectureInFirstHalf)
+```
+
+You could also create complex duration with multiple date components involved in it.
+
