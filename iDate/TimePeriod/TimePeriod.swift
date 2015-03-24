@@ -69,3 +69,15 @@ public func + (date: NSDate, ti: NSTimeInterval) -> NSDate {
 public func - (date: NSDate, ti: NSTimeInterval) -> NSDate {
     return date.dateByAddingTimeInterval(-ti)
 }
+
+public func + (date: NSDate, components: NSDateComponents) -> NSDate? {
+    var calendar = NSCalendar.currentCalendar()
+    return calendar.dateByAddingComponents(components, toDate: date, options: nil)
+}
+
+public func - (date1: NSDate, date2: NSDate) -> NSDateComponents {
+    var calendar = NSCalendar.currentCalendar()
+    var unitFlags : NSCalendarUnit = .CalendarUnitEra | .CalendarUnitYear | .CalendarUnitMonth |
+                    .CalendarUnitDay | .CalendarUnitHour | .CalendarUnitMinute | .CalendarUnitSecond
+    return calendar.components(unitFlags, fromDate: date1, toDate: date2, options: nil)
+}
