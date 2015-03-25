@@ -162,3 +162,29 @@ let thisWeek    = NSDate.thisWeek()             \\Mar 15 2015, 00:00:00 - Start 
 let thisMonth   = NSDate.thisMonth()            \\Mar 1 2015, 00:00:00  - Start of this month
 let thisYear    = NSDate.thisYear()             \\Jan 1 2015, 00:00:00  - Start of this year
 ```
+
+### Start and End dates
+
+Following methods gives start and end times
+
+```
+let date = Mar 21 2015, 13:30:49
+
+let startOfMinute 		= date.startOfMinute() 		//Mar 21 2015, 13:30:00
+let endOfMinute		    = date.endOfMinute()        //Mar 21 2015, 13:30:59
+
+let startOfHour         = date.startOfHour()        //Mar 21 2015, 13:00:00
+let endOfHour           = date.endOfHour()          //Mar 21 2015, 13:59:59
+
+let startOfDay          = date.startOfDay()         //Mar 21 2015, 00:00:00
+let endOfDay            = date.endOfDay()           //Mar 21 2015, 23:59:59
+
+let startOfWeek         = date.startOfWeek()        //Mar 15 2015, 00:00:00
+let endOfWeek           = date.endOfWeek()          //Mar 21 2015, 23:59:59
+
+let startOfMonth        = date.startOfMonth()       //Mar 01 2015, 00:00:00
+let endOfMonth          = date.endOfMonth()         //Mar 31 2015, 23:59:59
+
+let startOfYear         = date.startOfYear()        //Jan 01 2015, 00:00:00
+let endOfYear           = date.endOfYear()          //Dec 31 2015, 23:59:59
+```
