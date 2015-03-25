@@ -128,7 +128,7 @@ let lastLectureStarts = firstLectureStarts + Lecture(numLectureInFirstHalf)
 
 You could also create complex duration with multiple date components involved in it.
 
-### Date components
+## Date components
 Access components of date using calculated properties. These are based on current calendar of the system.
 
 ```
@@ -144,7 +144,7 @@ let year    = date.year     \\ 2015
 let weekOfMonth = date.weekOfMonth \\ 3 - 3rd week
 ```
 
-### Basic useful dates
+## Basic useful dates
 Following are utility methods for creating some basic dates:
 
 ```
@@ -163,12 +163,12 @@ let thisMonth   = NSDate.thisMonth()            \\Mar 1 2015, 00:00:00  - Start 
 let thisYear    = NSDate.thisYear()             \\Jan 1 2015, 00:00:00  - Start of this year
 ```
 
-### Start and End dates
+## Start and End dates
 
-Following methods gives start and end times
+Following methods gives start and end times for specified date.
 
 ```
-let date = Mar 21 2015, 13:30:49
+let date = //Mar 21 2015, 13:30:49
 
 let startOfMinute 		= date.startOfMinute() 		//Mar 21 2015, 13:30:00
 let endOfMinute		    = date.endOfMinute()        //Mar 21 2015, 13:30:59
@@ -187,4 +187,30 @@ let endOfMonth          = date.endOfMonth()         //Mar 31 2015, 23:59:59
 
 let startOfYear         = date.startOfYear()        //Jan 01 2015, 00:00:00
 let endOfYear           = date.endOfYear()          //Dec 31 2015, 23:59:59
+```
+
+## Next and Previous dates
+
+Following method gives next and previous dates for specified date.
+
+```
+let date = //Mar 21 2015, 13:30:49
+
+let nextMinute 		= date.nextfMinute() 		//Mar 21 2015, 13:31:00
+let previousMinute  = date.previousMinute()     //Mar 21 2015, 13:29:00
+
+let nextHour         = date.nextHour()          //Mar 21 2015, 14:00:00
+let previousHour     = date.previousHour()      //Mar 21 2015, 12:00:00
+
+let nextDay          = date.nextfDay()          //Mar 22 2015, 00:00:00
+let previousDay      = date.previousDay()       //Mar 20 2015, 00:00:00
+
+let nextWeek         = date.nextWeek()          //Mar 22 2015, 00:00:00
+let previousWeek     = date.previousWeek()      //Mar 08 2015, 00:00:00
+
+let nextMonth        = date.nextMonth()         //Apr 01 2015, 00:00:00
+let previousMonth    = date.previousMonth()     //Feb 01 2015, 00:00:00
+
+let nextYear         = date.nextYear()          //Jan 01 2016, 00:00:00
+let previousYear     = date.previousYear()      //Jan 01 2014, 00:00:00
 ```
