@@ -52,6 +52,33 @@ public class TimePeriodBase: TimePeriod {
     }
 }
 
+public class Lecture: TimePeriodBase {
+    
+    let lectureMinutes = 45.0
+    
+    public class override var INTERVAL: NSTimeInterval {
+        return Minute.INTERVAL * Lecture().lectureMinutes
+    }
+    
+    public override var interval: NSTimeInterval {
+        return Lecture.INTERVAL * Double(count)
+    }
+    
+    public override var component: NSDateComponents {
+        var component = NSDateComponents()
+        component.minute = Int(Double(count) * lectureMinutes)
+        return component
+    }
+    
+    public override var negativeComponent: NSDateComponents {
+        var component = NSDateComponents()
+        component.minute = -Int(Double(count) * lectureMinutes)
+        return component
+    }
+}
+
+var v = NSDate.now() + Lecture()
+
 public func + <T: TimePeriod> (date: NSDate, period: T) -> NSDate {
     var calendar = NSCalendar.currentCalendar()
     return calendar.dateByAddingComponents(period.component, toDate: date, options: nil)!
