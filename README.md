@@ -216,7 +216,18 @@ let previousYear     = date.previousYear()      //Jan 01 2014, 00:00:00
 ```
 
 # Using the framework
+## Adding to a workspace
 
+1. Download and place the code into workspace directory 
+2. Click file -> "Add files to <Workspace_name>"
+3. Navigate to iDate directory into your workspace directory
+4. Click on iDate.xcodeproj
+
+The project is now part of your workspace. You will have to add its reference to your main project in target section.
+
+## Adding to a project
+
+1. Copy the iDate/iDate source folder into your project
 
 # Lincense
 
