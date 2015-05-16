@@ -30,7 +30,7 @@ public extension NSDate {
     }
     
     public func startOfDay() -> NSDate {
-        return NSCalendar.currentCalendar().startOfDayForDate(self)
+        return NSCalendar.defaultCalendar.startOfDayForDate(self)
     }
     
     public func endOfDay() -> NSDate {
@@ -38,7 +38,7 @@ public extension NSDate {
     }
     
     public func startOfWeek() -> NSDate {
-        var calendar = NSCalendar.currentCalendar()
+        var calendar = NSCalendar.defaultCalendar
         var unitFlags : NSCalendarUnit = .CalendarUnitEra | .CalendarUnitYear | .CalendarUnitMonth
                                        | .CalendarUnitWeekday | .CalendarUnitDay
         var comps = calendar.components(unitFlags, fromDate: self)
@@ -67,7 +67,7 @@ public extension NSDate {
     }
     
     private func dateFromComponents(unitFlags: NSCalendarUnit) -> NSDate {
-        var calendar = NSCalendar.currentCalendar()
+        var calendar = NSCalendar.defaultCalendar
         var comps = calendar.components(unitFlags, fromDate: self)
         return calendar.dateFromComponents(comps)!
     }

@@ -31,7 +31,7 @@ public extension NSDate {
     }
     
     public var weekDayName: String {
-        return NSCalendar.currentCalendar().standaloneWeekdaySymbols[weekDay - 1] as String
+        return NSCalendar.defaultCalendar.standaloneWeekdaySymbols[weekDay - 1] as String
     }
     
     public var month: Int {
@@ -39,7 +39,7 @@ public extension NSDate {
     }
 
     public var monthName: String {
-        return NSCalendar.currentCalendar().standaloneMonthSymbols[month - 1] as String
+        return NSCalendar.defaultCalendar.standaloneMonthSymbols[month - 1] as String
     }
 
     public var weekOfMonth: Int {
@@ -76,6 +76,6 @@ public extension NSDate {
     }
     
     func components(unitFlags: NSCalendarUnit) -> NSDateComponents {
-        return NSCalendar.currentCalendar().components(unitFlags, fromDate: self)
+        return NSCalendar.defaultCalendar.components(unitFlags, fromDate: self)
     }
 }

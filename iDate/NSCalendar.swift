@@ -8,7 +8,23 @@
 
 import Foundation
 
+
+struct NSCalendarExt {
+    
+    static var defaultCalendar = NSCalendar.currentCalendar()
+}
+
 extension NSCalendar {
+    
+    public class var defaultCalendar: NSCalendar {
+        get {
+            return NSCalendarExt.defaultCalendar
+        }
+        
+        set {
+            NSCalendarExt.defaultCalendar = newValue
+        }
+    }
     
     func dateWithYear(year: UInt, month: UInt = 1, day: UInt = 1, hour: UInt = 0, minute: UInt = 0, second: UInt = 0) -> NSDate {
        
@@ -24,7 +40,7 @@ extension NSCalendar {
     }
     
     class func dateWithYear(year: UInt, month: UInt = 1, day: UInt = 1, hour: UInt = 0, minute: UInt = 0, second: UInt = 0) -> NSDate {
-        return NSCalendar.currentCalendar()
+        return NSCalendar.defaultCalendar
                 .dateWithYear(year, month: month, day: day, hour: hour, minute: minute, second: second)
     }
 }

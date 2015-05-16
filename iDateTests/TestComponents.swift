@@ -13,7 +13,7 @@ import XCTest
 class TestComponents : XCTestCase {
     
     let date = NSDate(timeIntervalSince1970: 1395482059)
-    let calendar = NSCalendar.currentCalendar()
+    let calendar = NSCalendar.defaultCalendar
     
     func testComponents() {
         

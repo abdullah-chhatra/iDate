@@ -41,17 +41,17 @@
 /* Begin PBXFileReference section */
 		B824293D1ABE858700CB3011 /* NSDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDate.swift; sourceTree = "<group>"; };
 		B82429401ABE85E600CB3011 /* PeriodComponents.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeriodComponents.swift; sourceTree = "<group>"; };
-		B82429411ABE85E600CB3011 /* TimePeriod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimePeriod.swift; sourceTree = "<group>"; };
+		B82429411ABE85E600CB3011 /* TimePeriod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = TimePeriod.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		B82429451ABE89B200CB3011 /* TestMinute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestMinute.swift; sourceTree = "<group>"; };
 		B82429471ABE8A0100CB3011 /* TestSecond.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestSecond.swift; sourceTree = "<group>"; };
 		B82429491ABE8A7800CB3011 /* TestHour.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestHour.swift; sourceTree = "<group>"; };
 		B824294B1ABE8B9B00CB3011 /* TestDay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestDay.swift; sourceTree = "<group>"; };
 		B824294D1ABEB3A100CB3011 /* NSDate+Comparision.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+Comparision.swift"; sourceTree = "<group>"; };
 		B82429501ABEB78E00CB3011 /* TestOperators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestOperators.swift; sourceTree = "<group>"; };
-		B82429521ABEDCD500CB3011 /* NSDate+StartEnd.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+StartEnd.swift"; sourceTree = "<group>"; };
+		B82429521ABEDCD500CB3011 /* NSDate+StartEnd.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = "NSDate+StartEnd.swift"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		B82429541ABF095800CB3011 /* NSDate+NextPrevious.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+NextPrevious.swift"; sourceTree = "<group>"; };
-		B82429561ABF0B6700CB3011 /* NSDate+Components.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+Components.swift"; sourceTree = "<group>"; };
-		B82429581ABF0E0400CB3011 /* TestComponents.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestComponents.swift; sourceTree = "<group>"; };
+		B82429561ABF0B6700CB3011 /* NSDate+Components.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = "NSDate+Components.swift"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		B82429581ABF0E0400CB3011 /* TestComponents.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = TestComponents.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		B824295C1AC18E1D00CB3011 /* TestStartEnd.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestStartEnd.swift; sourceTree = "<group>"; };
 		B89F25FC1AB895D000346B6C /* AddSubstractTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddSubstractTest.swift; sourceTree = "<group>"; };
 		B8BE043C1AB85A3B005DA391 /* iDate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = iDate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -60,7 +60,7 @@
 		B8BE04471AB85A3B005DA391 /* iDateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iDateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8BE044D1AB85A3B005DA391 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B8BE044E1AB85A3B005DA391 /* iDateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iDateTests.swift; sourceTree = "<group>"; };
-		B8BE045C1AB864E0005DA391 /* NSCalendar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSCalendar.swift; sourceTree = "<group>"; };
+		B8BE045C1AB864E0005DA391 /* NSCalendar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = NSCalendar.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */

@@ -80,12 +80,12 @@ public class Lecture: TimePeriodBase {
 var v = NSDate.now() + Lecture()
 
 public func + <T: TimePeriod> (date: NSDate, period: T) -> NSDate {
-    var calendar = NSCalendar.currentCalendar()
+    var calendar = NSCalendar.defaultCalendar
     return calendar.dateByAddingComponents(period.component, toDate: date, options: nil)!
 }
 
 public func - <T: TimePeriod> (date: NSDate, period: T) -> NSDate {
-    var calendar = NSCalendar.currentCalendar()
+    var calendar = NSCalendar.defaultCalendar
     return calendar.dateByAddingComponents(period.negativeComponent, toDate: date, options: nil)!
 }
 
@@ -98,12 +98,12 @@ public func - (date: NSDate, ti: NSTimeInterval) -> NSDate {
 }
 
 public func + (date: NSDate, components: NSDateComponents) -> NSDate? {
-    var calendar = NSCalendar.currentCalendar()
+    var calendar = NSCalendar.defaultCalendar
     return calendar.dateByAddingComponents(components, toDate: date, options: nil)
 }
 
 public func - (date1: NSDate, date2: NSDate) -> NSDateComponents {
-    var calendar = NSCalendar.currentCalendar()
+    var calendar = NSCalendar.defaultCalendar
     var unitFlags : NSCalendarUnit = .CalendarUnitEra | .CalendarUnitYear | .CalendarUnitMonth |
                     .CalendarUnitDay | .CalendarUnitHour | .CalendarUnitMinute | .CalendarUnitSecond
     return calendar.components(unitFlags, fromDate: date1, toDate: date2, options: nil)

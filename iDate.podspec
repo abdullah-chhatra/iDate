@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
   s.description      = "Easy handling of date for iOS. Some extensions of NSDate and useful operators"
   s.homepage         = "https://github.com/abdullah-chhatra/iDate.git"
   s.license          = 'MIT'
-  s.author           = { "Abdulmunaf Chhatra" => "abdulmunaf.chhatra@ensuantinc.com" }
+  s.author           = { "Abdulmunaf Chhatra" => "abdullah.chhatra@gmail.com" }
   s.source           = { :git => "https://github.com/abdullah-chhatra/iDate.git", :tag => s.version.to_s }
 
   s.platform         = :ios, '8.0'
