@@ -20,7 +20,7 @@ public protocol TimePeriod {
     
     init(_ count: UInt)
     
-    class var INTERVAL: NSTimeInterval { get }
+    static var INTERVAL: NSTimeInterval { get }
 }
 
 public class TimePeriodBase: TimePeriod {
@@ -28,19 +28,19 @@ public class TimePeriodBase: TimePeriod {
     var _count: UInt
     
     public var component: NSDateComponents {
-        assertionFailure("Derived class must implement this")
+        preconditionFailure("Derived class must implement this")
     }
 
     public var negativeComponent: NSDateComponents {
-        assertionFailure("Derived class must implement this")
+        preconditionFailure("Derived class must implement this")
     }
     
     public class var INTERVAL : NSTimeInterval {
-        assertionFailure("Derived class must implement this")
+        preconditionFailure("Derived class must implement this")
     }
     
     public var interval : NSTimeInterval {
-        assertionFailure("Derived class must implement this")
+        preconditionFailure("Derived class must implement this")
     }
     
     public var count: UInt {
