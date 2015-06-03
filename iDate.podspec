@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "iDate"
-  s.version          = "0.1.0"
+  s.version          = "0.1.1"
   s.summary          = "Easy handling of date for iOS."
   s.description      = "Easy handling of date for iOS. Some extensions of NSDate and useful operators"
   s.homepage         = "https://github.com/abdullah-chhatra/iDate.git"
