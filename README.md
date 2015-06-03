@@ -1,5 +1,5 @@
 # iDate
-This framework provides easy to use wrappers and category over NSDate. The key factor while designing this framework is easy and intuitive way of using NSDate. Most of the operations and method work with current NSCalendar. So please bear in mind that any operation that requires a calendar instance is using NSCalendar.currentCalendar().
+This framework provides easy to use wrappers and category over NSDate. The key factor while designing this framework is easy and intuitive way of using NSDate.
 
 The smallest unit precision is a second in most of the date arithmetic.
 
@@ -214,8 +214,21 @@ let previousMonth    = date.previousMonth()     //Feb 01 2015, 00:00:00
 let nextYear         = date.nextYear()          //Jan 01 2016, 00:00:00
 let previousYear     = date.previousYear()      //Jan 01 2014, 00:00:00
 ```
+# Changing default calendar
+
+All the date related calcuations are done using system default calender i.e. NSCalendar.currentCalendar(). If you wish to use any other calendar you could do so by 
+
+```
+NSCalendar.defaultCalendar = Some new calendar instance here
+```
 
 # Using the framework
+## Using Cocoapods
+
+This is the easiest way to use iDate. Add following line to your Podfile:
+
+pod 'iDate'
+
 ## Adding to a workspace
 
 1. Download and place the code into workspace directory 
