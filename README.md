@@ -223,7 +223,7 @@ NSCalendar.defaultCalendar = Some new calendar instance here
 ```
 
 # Using the framework
-## Using Cocoapods
+## Using CocoaPods
 
 This is the easiest way to use iDate. Add following line to your Podfile:
 
