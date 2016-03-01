@@ -17,8 +17,7 @@ class TestComponents : XCTestCase {
     
     func testComponents() {
         
-        var comps = calendar.components(.CalendarUnitHour | .CalendarUnitMinute | .CalendarUnitSecond |
-                                        .CalendarUnitDay | .CalendarUnitEra | .CalendarUnitYear | .CalendarUnitMonth,
+        var comps = calendar.components([.Hour, .Minute, .Second, .Day, .Era, .Year, .Month],
                                         fromDate: date)
         
         XCTAssertEqual(date.second, comps.second)

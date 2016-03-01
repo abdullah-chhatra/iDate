@@ -11,68 +11,67 @@ import Foundation
 public extension NSDate {
         
     public var second: Int {
-        return components(.CalendarUnitSecond).second
+        return components(.Second).second
     }
     
     public var minute: Int {
-        return components(.CalendarUnitMinute).minute
+        return components(.Minute).minute
     }
     
     public var hour: Int {
-        return components(.CalendarUnitHour).hour
+        return components(.Hour).hour
     }
 
     public var day : Int {
-        return components(.CalendarUnitDay).day
+        return components(.Day).day
     }
     
     public var weekDay: Int {
-        return components(NSCalendarUnit.CalendarUnitWeekday).weekday
+        return components(NSCalendarUnit.Weekday).weekday
     }
     
     public var weekDayName: String {
-        return NSCalendar.defaultCalendar.standaloneWeekdaySymbols[weekDay - 1] as! String
+        return NSCalendar.defaultCalendar.standaloneWeekdaySymbols[weekDay - 1] 
     }
     
     public var month: Int {
-        return components(.CalendarUnitMonth).month
+        return components(.Month).month
     }
 
     public var monthName: String {
-        return NSCalendar.defaultCalendar.standaloneMonthSymbols[month - 1] as! String
+        return NSCalendar.defaultCalendar.standaloneMonthSymbols[month - 1] 
     }
 
     public var weekOfMonth: Int {
-        return components(.CalendarUnitWeekOfMonth).weekOfMonth
+        return components(.WeekOfMonth).weekOfMonth
     }
     
     public var quarter: Int {
-        return components(.CalendarUnitQuarter).quarter
+        return components(.Quarter).quarter
     }
     
     public var year: Int {
-        return components(.CalendarUnitYear).year
+        return components(.Year).year
     }
 
     public var weekOfYear: Int {
-        return components(.CalendarUnitWeekOfYear).weekOfYear
+        return components(.WeekOfYear).weekOfYear
     }
 
     public var era: Int {
-        return components(.CalendarUnitEra).era
+        return components(.Era).era
     }
     
     public func timeComponents() -> NSDateComponents {
-        return components(.CalendarUnitHour | .CalendarUnitMinute | .CalendarUnitSecond)
+        return components([.Hour, .Minute, .Second])
     }
     
     public func dateComponents() -> NSDateComponents {
-        return components(.CalendarUnitEra | .CalendarUnitYear | .CalendarUnitMonth | .CalendarUnitDay)
+        return components([.Era, .Year, .Month, .Day])
     }
     
     public func dateTimeComponents() -> NSDateComponents {
-        return components(.CalendarUnitHour | .CalendarUnitMinute | .CalendarUnitSecond |
-                              .CalendarUnitEra | .CalendarUnitYear | .CalendarUnitMonth | .CalendarUnitDay)
+        return components([.Hour, .Minute, .Second, .Era, .Year, .Month, .Day])
     }
     
     func components(unitFlags: NSCalendarUnit) -> NSDateComponents {
