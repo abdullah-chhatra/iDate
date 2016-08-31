@@ -11,9 +11,7 @@ import Foundation
 public extension NSDate {
     
     public func startOfMinute() -> NSDate {
-        return dateFromComponents(.CalendarUnitEra | .CalendarUnitYear
-                                | .CalendarUnitMonth | .CalendarUnitDay
-                                | .CalendarUnitHour | .CalendarUnitMinute)
+        return dateFromComponents([.Era, .Year, .Month, .Day, .Hour, .Minute])
     }
     
     public func endOfMinute() -> NSDate {
@@ -21,8 +19,7 @@ public extension NSDate {
     }
     
     public func startOfHour() -> NSDate {
-        return dateFromComponents(.CalendarUnitEra | .CalendarUnitYear
-                                | .CalendarUnitMonth | .CalendarUnitDay | .CalendarUnitHour)
+        return dateFromComponents([.Era, .Year, .Month, .Day, .Hour])
     }
     
     public func endOfHour() -> NSDate {
@@ -38,10 +35,9 @@ public extension NSDate {
     }
     
     public func startOfWeek() -> NSDate {
-        var calendar = NSCalendar.defaultCalendar
-        var unitFlags : NSCalendarUnit = .CalendarUnitEra | .CalendarUnitYear | .CalendarUnitMonth
-                                       | .CalendarUnitWeekday | .CalendarUnitDay
-        var comps = calendar.components(unitFlags, fromDate: self)
+        let calendar = NSCalendar.defaultCalendar
+        let unitFlags : NSCalendarUnit = [.Era, .Year, .Month, .Weekday, .Day]
+        let comps = calendar.components(unitFlags, fromDate: self)
         comps.day -= comps.weekday - calendar.firstWeekday
         return calendar.dateFromComponents(comps)!
     }
@@ -51,7 +47,7 @@ public extension NSDate {
     }
     
     public func startOfMonth() -> NSDate {
-        return dateFromComponents(.CalendarUnitEra | .CalendarUnitYear | .CalendarUnitMonth)
+        return dateFromComponents([.Era, .Year, .Month])
     }
     
     public func endOfMonth() -> NSDate {
@@ -59,7 +55,7 @@ public extension NSDate {
     }
     
     public func startOfYear() -> NSDate {
-        return dateFromComponents(.CalendarUnitEra | .CalendarUnitYear)
+        return dateFromComponents([.Era, .Year])
     }
     
     public func endOfYear() -> NSDate {
@@ -67,8 +63,8 @@ public extension NSDate {
     }
     
     private func dateFromComponents(unitFlags: NSCalendarUnit) -> NSDate {
-        var calendar = NSCalendar.defaultCalendar
-        var comps = calendar.components(unitFlags, fromDate: self)
+        let calendar = NSCalendar.defaultCalendar
+        let comps = calendar.components(unitFlags, fromDate: self)
         return calendar.dateFromComponents(comps)!
     }
 }

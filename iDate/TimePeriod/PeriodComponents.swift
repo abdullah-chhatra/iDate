@@ -19,13 +19,13 @@ public class Second : TimePeriodBase {
     }
     
     public override var component: NSDateComponents {
-        var component = NSDateComponents()
+        let component = NSDateComponents()
         component.second = Int(count)
         return component
     }
     
     public override var negativeComponent: NSDateComponents {
-        var component = NSDateComponents()
+        let component = NSDateComponents()
         component.second = -Int(count)
         return component
     }
@@ -42,13 +42,13 @@ public class Minute : TimePeriodBase {
     }
     
     public override var component: NSDateComponents {
-        var component = NSDateComponents()
+        let component = NSDateComponents()
         component.minute = Int(count)
         return component
     }
     
     public override var negativeComponent: NSDateComponents {
-        var component = NSDateComponents()
+        let component = NSDateComponents()
         component.minute = -Int(count)
         return component
     }
@@ -65,13 +65,13 @@ public class Hour : TimePeriodBase {
     }
     
     public override var component: NSDateComponents {
-        var component = NSDateComponents()
+        let component = NSDateComponents()
         component.hour = Int(count)
         return component
     }
     
     public override var negativeComponent: NSDateComponents {
-        var component = NSDateComponents()
+        let component = NSDateComponents()
         component.hour = -Int(count)
         return component
     }
@@ -88,13 +88,13 @@ public class Day : TimePeriodBase {
     }
     
     public override var component: NSDateComponents {
-        var component = NSDateComponents()
+        let component = NSDateComponents()
         component.day = Int(count)
         return component
     }
     
     public override var negativeComponent: NSDateComponents {
-        var component = NSDateComponents()
+        let component = NSDateComponents()
         component.day = -Int(count)
         return component
     }
@@ -113,13 +113,13 @@ public class Week : TimePeriodBase {
     }
     
     public override var component: NSDateComponents {
-        var component = NSDateComponents()
+        let component = NSDateComponents()
         component.day = Int(count * DAYS_IN_WEEK)
         return component
     }
     
     public override var negativeComponent: NSDateComponents {
-        var component = NSDateComponents()
+        let component = NSDateComponents()
         component.day = -Int(count * DAYS_IN_WEEK)
         return component
     }
@@ -136,13 +136,13 @@ public class Month : TimePeriodBase {
     }
     
     public override var component: NSDateComponents {
-        var component = NSDateComponents()
+        let component = NSDateComponents()
         component.month = Int(count)
         return component
     }
     
     public override var negativeComponent: NSDateComponents {
-        var component = NSDateComponents()
+        let component = NSDateComponents()
         component.month = -Int(count)
         return component
     }
@@ -159,13 +159,13 @@ public class Year : TimePeriodBase {
     }
     
     public override var component: NSDateComponents {
-        var component = NSDateComponents()
+        let component = NSDateComponents()
         component.year = Int(count)
         return component
     }
     
     public override var negativeComponent: NSDateComponents {
-        var component = NSDateComponents()
+        let component = NSDateComponents()
         component.year = -Int(count)
         return component
     }

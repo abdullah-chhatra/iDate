@@ -65,13 +65,13 @@ public class Lecture: TimePeriodBase {
     }
     
     public override var component: NSDateComponents {
-        var component = NSDateComponents()
+        let component = NSDateComponents()
         component.minute = Int(Double(count) * lectureMinutes)
         return component
     }
     
     public override var negativeComponent: NSDateComponents {
-        var component = NSDateComponents()
+        let component = NSDateComponents()
         component.minute = -Int(Double(count) * lectureMinutes)
         return component
     }
@@ -80,13 +80,13 @@ public class Lecture: TimePeriodBase {
 var v = NSDate.now() + Lecture()
 
 public func + <T: TimePeriod> (date: NSDate, period: T) -> NSDate {
-    var calendar = NSCalendar.defaultCalendar
-    return calendar.dateByAddingComponents(period.component, toDate: date, options: nil)!
+    let calendar = NSCalendar.defaultCalendar
+    return calendar.dateByAddingComponents(period.component, toDate: date, options: [])!
 }
 
 public func - <T: TimePeriod> (date: NSDate, period: T) -> NSDate {
-    var calendar = NSCalendar.defaultCalendar
-    return calendar.dateByAddingComponents(period.negativeComponent, toDate: date, options: nil)!
+    let calendar = NSCalendar.defaultCalendar
+    return calendar.dateByAddingComponents(period.negativeComponent, toDate: date, options: [])!
 }
 
 public func + (date: NSDate, ti: NSTimeInterval) -> NSDate {
@@ -98,15 +98,14 @@ public func - (date: NSDate, ti: NSTimeInterval) -> NSDate {
 }
 
 public func + (date: NSDate, components: NSDateComponents) -> NSDate? {
-    var calendar = NSCalendar.defaultCalendar
-    return calendar.dateByAddingComponents(components, toDate: date, options: nil)
+    let calendar = NSCalendar.defaultCalendar
+    return calendar.dateByAddingComponents(components, toDate: date, options: [])
 }
 
 public func - (date1: NSDate, date2: NSDate) -> NSDateComponents {
-    var calendar = NSCalendar.defaultCalendar
-    var unitFlags : NSCalendarUnit = .CalendarUnitEra | .CalendarUnitYear | .CalendarUnitMonth |
-                    .CalendarUnitDay | .CalendarUnitHour | .CalendarUnitMinute | .CalendarUnitSecond
-    return calendar.components(unitFlags, fromDate: date1, toDate: date2, options: nil)
+    let calendar = NSCalendar.defaultCalendar
+    let unitFlags : NSCalendarUnit = [.Era, .Year, .Month, .Day, .Hour, .Minute, .Second]
+    return calendar.components(unitFlags, fromDate: date1, toDate: date2, options: [])
 }
 
 public func - (date1: NSDate, date2: NSDate) -> NSTimeInterval {

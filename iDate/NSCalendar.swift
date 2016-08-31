@@ -28,7 +28,7 @@ extension NSCalendar {
     
     func dateWithYear(year: UInt, month: UInt = 1, day: UInt = 1, hour: UInt = 0, minute: UInt = 0, second: UInt = 0) -> NSDate {
        
-        var components = NSDateComponents()
+        let components = NSDateComponents()
         components.year     = Int(year)
         components.month    = Int(month)
         components.day      = Int(day)
